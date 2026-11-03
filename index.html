@@ -3,447 +3,437 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>معلا الإخبارية | جنبات معلا</title>
+<title>إلى حبيبتي آلاء ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
 
 <style>
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Tahoma, Arial, sans-serif;
-    background: #10151d;
-    color: white;
-    min-height: 100vh;
+  font-family: 'Cairo', sans-serif;
+  background: #fff0f5;
+  color: #713d53;
+  overflow-x: hidden;
+  min-height: 100vh;
 }
 
-header {
-    background: #090d13;
-    border-bottom: 3px solid #d71920;
-    padding: 18px 6%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
+#login {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  background:
+    radial-gradient(circle at top, #ffe0eb, transparent 60%),
+    linear-gradient(135deg,#fff5f8,#fbd5e3);
 }
 
-.logo {
-    font-size: 27px;
-    font-weight: bold;
-    line-height: 1.5;
+.login-card {
+  background: rgba(255,255,255,.75);
+  backdrop-filter: blur(15px);
+  padding: 40px 25px;
+  width: 100%;
+  max-width: 390px;
+  border: 1px solid white;
+  border-radius: 28px;
+  text-align: center;
+  box-shadow: 0 15px 50px #d98da933;
 }
 
-.logo span {
-    color: #e31b23;
+.big-heart {
+  font-size: 65px;
+  animation: heartbeat 1.5s infinite;
 }
 
-.logo small {
-    display: block;
-    color: #aaa;
-    font-size: 12px;
-    font-weight: normal;
+h1 {
+  font-size: 25px;
+  margin: 15px 0;
 }
 
-.live {
-    background: #d71920;
-    padding: 8px 15px;
-    font-size: 13px;
-    font-weight: bold;
-    border-radius: 3px;
-    animation: pulse 1.5s infinite;
+.login-card p {
+  color: #a8788d;
+  margin-bottom: 25px;
 }
 
-@keyframes pulse {
-    50% { opacity: .55; }
+input {
+  width: 100%;
+  border: 1px solid #f1c3d4;
+  outline: none;
+  padding: 15px;
+  border-radius: 15px;
+  text-align: center;
+  font-family: inherit;
+  font-size: 17px;
+  background: #fff8fb;
 }
 
-nav {
-    background: #18212c;
-    padding: 13px 6%;
-    display: flex;
-    gap: 25px;
-    font-size: 14px;
-    color: #ddd;
-    border-bottom: 1px solid #303b49;
+input:focus {
+  border-color: #e88cac;
+  box-shadow: 0 0 10px #f3c1d5;
 }
 
-nav span:first-child {
-    color: #ff4248;
-    font-weight: bold;
+button {
+  font-family: inherit;
+  border: none;
+  background: linear-gradient(135deg,#e985a9,#d65e8b);
+  color: white;
+  padding: 13px 30px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+  box-shadow: 0 6px 18px #d65e8b44;
 }
 
-.container {
-    max-width: 1050px;
-    margin: 35px auto;
-    padding: 0 18px;
+button:active {
+  transform: scale(.96);
 }
 
-.section-title {
-    border-right: 4px solid #d71920;
-    padding-right: 12px;
-    margin-bottom: 20px;
-    font-size: 19px;
+#site {
+  display: none;
+  min-height: 100vh;
+  text-align: center;
+  padding: 30px 18px 60px;
+  position: relative;
+  background: linear-gradient(180deg,#fff0f5,#ffe1ec,#fff6f9);
+  overflow: hidden;
 }
 
-.main-news {
-    background: #1b2532;
-    border: 1px solid #344253;
-    border-radius: 8px;
-    overflow: hidden;
-    min-height: 280px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 12px 35px #0005;
+.hero {
+  max-width: 650px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
-.news-top {
-    background: #d71920;
-    padding: 10px 18px;
-    font-weight: bold;
-    display: flex;
-    justify-content: space-between;
-    font-size: 13px;
+.tag {
+  color: #ce7196;
+  letter-spacing: 2px;
+  font-size: 13px;
+  margin-top: 20px;
 }
 
-.news-content {
-    padding: 35px 25px;
-    text-align: center;
-    animation: appear .6s ease;
+.name {
+  font-size: clamp(42px,10vw,75px);
+  color: #cf648e;
+  font-weight: 800;
+  margin: 12px 0;
+  text-shadow: 0 5px 20px #eaaac3;
 }
 
-@keyframes appear {
-    from { opacity: 0; transform: translateY(12px); }
-    to { opacity: 1; transform: translateY(0); }
+.subtitle {
+  font-size: 18px;
+  color: #a65e7c;
 }
 
-.category {
-    color: #ff555b;
-    font-size: 13px;
-    margin-bottom: 15px;
-    font-weight: bold;
+.photo-frame {
+  width: 100%;
+  max-width: 370px;
+  margin: 30px auto;
+  padding: 9px;
+  border-radius: 25px;
+  background: white;
+  box-shadow: 0 10px 35px #bc6e9030;
+  transform: rotate(-1deg);
 }
 
-.news-content h1 {
-    font-size: clamp(23px, 4vw, 36px);
-    line-height: 1.8;
-    margin-bottom: 15px;
+.photo-frame img {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-radius: 19px;
+  display: block;
 }
 
-.news-content p {
-    color: #c2cad3;
-    line-height: 2;
-    font-size: 15px;
-    max-width: 750px;
-    margin: auto;
+.love-card {
+  background: rgba(255,255,255,.8);
+  backdrop-filter: blur(10px);
+  max-width: 530px;
+  min-height: 180px;
+  margin: 25px auto;
+  padding: 28px 22px;
+  border-radius: 25px;
+  border: 1px solid white;
+  box-shadow: 0 10px 35px #d18aa522;
 }
 
-.news-bottom {
-    padding: 12px 18px;
-    border-top: 1px solid #344253;
-    color: #9da9b7;
-    font-size: 12px;
-    display: flex;
-    justify-content: space-between;
+.love-card h2 {
+  color: #d66f98;
+  margin-bottom: 17px;
 }
 
-.controls {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    margin: 18px 0 35px;
+#message {
+  font-size: 17px;
+  line-height: 2.1;
+  color: #815269;
+  min-height: 85px;
 }
 
-.controls button {
-    background: #d71920;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 14px;
+.counter {
+  color: #c97999;
+  margin-top: 15px;
+  font-size: 13px;
 }
 
-.controls button:hover {
-    background: #a80e15;
+.signature {
+  font-size: 19px;
+  margin-top: 35px;
+  color: #c45e88;
 }
 
-#counter {
-    color: #c5ccd5;
-    font-size: 13px;
+.floating {
+  position: fixed;
+  bottom: -40px;
+  z-index: 1;
+  pointer-events: none;
+  animation: floatUp linear forwards;
 }
 
-.ticker {
-    display: flex;
-    align-items: stretch;
-    background: #090d13;
-    border: 1px solid #303b49;
-    overflow: hidden;
-    margin-top: 30px;
-    height: 48px;
+@keyframes floatUp {
+  to {
+    transform: translateY(-115vh) rotate(360deg);
+    opacity: 0;
+  }
 }
 
-.ticker-label {
-    background: #d71920;
-    padding: 14px 18px;
-    font-weight: bold;
-    white-space: nowrap;
-    font-size: 13px;
-    z-index: 1;
+@keyframes heartbeat {
+  0%,100% {transform:scale(1)}
+  50% {transform:scale(1.18)}
 }
 
-.ticker-window {
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    flex: 1;
+@keyframes fade {
+  from {opacity:0;transform:translateY(15px)}
+  to {opacity:1;transform:translateY(0)}
 }
 
-.ticker-text {
-    white-space: nowrap;
-    padding-right: 100%;
-    animation: ticker 25s linear infinite;
-    color: #eee;
-    font-size: 13px;
+.hidden {
+  display: none !important;
 }
 
-@keyframes ticker {
-    from { transform: translateX(0); }
-    to { transform: translateX(100%); }
+.footer {
+  margin-top: 35px;
+  color: #c18aa0;
+  font-size: 12px;
 }
 
-.disclaimer {
-    background: #18212c;
-    border-right: 3px solid #d71920;
-    color: #b9c3ce;
-    padding: 15px;
-    line-height: 1.9;
-    font-size: 12px;
-    margin-top: 30px;
-}
-
-footer {
-    background: #090d13;
-    text-align: center;
-    padding: 25px 10px;
-    color: #84909d;
-    font-size: 12px;
-    margin-top: 45px;
-    border-top: 1px solid #303b49;
-}
-
-footer strong {
-    color: #e31b23;
-}
-
-@media(max-width: 600px) {
-    header {
-        padding: 15px;
-    }
-
-    .logo {
-        font-size: 22px;
-    }
-
-    nav {
-        gap: 15px;
-        overflow-x: auto;
-        white-space: nowrap;
-        padding: 12px 15px;
-    }
-
-    .news-content {
-        padding: 30px 17px;
-    }
-
-    .news-bottom {
-        font-size: 10px;
-    }
-}
 </style>
 </head>
 
 <body>
 
-<header>
-    <div class="logo">
-        <span>معلا</span> الإخبارية
-        <small>جنبات معلا | الخبر أولاً.. والضحكة أخيراً</small>
+<!-- شاشة كلمة المرور -->
+
+<section id="login">
+  <div class="login-card">
+    <div class="big-heart">💗</div>
+
+    <h1>جاهزة يا حبيبتي آلاء؟ 😍</h1>
+
+    <p>في حاجة صغيرة معمولة مخصوص ليكِ...</p>
+
+    <input
+      type="password"
+      id="password"
+      placeholder="اكتبي كلمة السر يا حلوة"
+      autocomplete="off"
+    >
+
+    <button onclick="unlock()">افتحي مفاجأتك ❤️</button>
+
+    <div style="margin-top:20px;color:#d28ba5;font-size:12px">
+      Made with love 💌
     </div>
-    <div class="live">● بث تجريبي</div>
-</header>
+  </div>
+</section>
 
-<nav>
-    <span>الرئيسية</span>
-    <span>آخر الأخبار</span>
-    <span>أخبار جنبات معلا</span>
-    <span>منوعات</span>
-</nav>
 
-<div class="container">
+<!-- الموقع الرئيسي -->
 
-    <h2 class="section-title">آخر المستجدات</h2>
+<main id="site">
 
-    <section class="main-news">
+  <div class="hero">
 
-        <div class="news-top">
-            <span>عاجل | جنبات معلا</span>
-            <span>نشرة حية</span>
-        </div>
+    <div class="tag">A LITTLE WORLD MADE FOR YOU</div>
 
-        <div class="news-content" id="newsContent">
-            <div class="category" id="category">أخبار حصرية</div>
-            <h1 id="headline">مرحباً بكم في معلا الإخبارية</h1>
-            <p id="description">
-                تابعوا آخر المستجدات والأحداث الطريفة من جنبات معلا.
-            </p>
-        </div>
-
-        <div class="news-bottom">
-            <span>معلا الإخبارية</span>
-            <span id="newsNumber">الخبر 1</span>
-        </div>
-
-    </section>
-
-    <div class="controls">
-        <button onclick="previousNews()">السابق</button>
-        <span id="counter">1 / 8</span>
-        <button onclick="nextNews()">التالي</button>
+    <div style="font-size:35px;margin-top:20px">
+      🌷 💗 🌷
     </div>
 
-    <h2 class="section-title">شريط الأخبار العاجلة</h2>
+    <h1 class="name">آلاء</h1>
 
-    <div class="ticker">
-        <div class="ticker-label">عاجل</div>
-        <div class="ticker-window">
-            <div class="ticker-text" id="tickerText">
-                معلا الإخبارية ترحب بكم.. تابعوا آخر الأخبار من جنبات معلا
-            </div>
-        </div>
+    <p class="subtitle">
+      يا أجمل حكاية في أيامي ❤️
+    </p>
+
+    <div class="photo-frame">
+      <img
+        src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900"
+        alt="لحظة حب رومانسية"
+      >
     </div>
 
-    <div class="disclaimer">
-        تنويه: معلا الإخبارية منصة ساخرة، والأخبار المنشورة هنا
-      .
+    <div class="love-card">
+
+      <h2>رسالة صغيرة ليكِ 💌</h2>
+
+      <p id="message"></p>
+
+      <div class="counter" id="counter">
+        رسالة 1 من 7
+      </div>
+
+      <button onclick="nextMessage()">
+        الرسالة التالية 🌸
+      </button>
+
     </div>
 
-</div>
+    <div class="love-card">
+      <h2>وعودي ليكِ 🤍</h2>
 
-<footer>
-    <strong>معلا الإخبارية</strong>
-    <p>جنبات معلا © 2026 — جميع الحقوق محفوظة</p>
-</footer>
+      <p style="line-height:2.2">
+        أوعدك أحاول أكون سبب في ضحكتك،
+        وأسمعك لما تحتاجي تتكلمي،
+        وأكون جنبك في الأيام الصعبة قبل الحلوة،
+        وأفضل أختارك كل يوم بمحبة واهتمام.
+        <br>
+        ما بوعدك إن الدنيا تكون مثالية،
+        لكن بوعدك إن وجودك عندي ما يكون حاجة عادية.
+      </p>
+    </div>
+
+    <div style="font-size:35px;margin-top:25px">
+      🌹 🦋 🌹
+    </div>
+
+    <div class="signature">
+      بحبك يا آلاء ❤️
+      <br>
+      <small>إلى أجمل إنسانة في قلبي</small>
+    </div>
+
+    <div class="footer">
+      THIS LITTLE WORLD BELONGS TO YOU
+      <br>
+      Made with all my love ♡
+    </div>
+
+  </div>
+
+</main>
+
 
 <script>
-const news = [
 
-{
-category: "أخبار اجتماعية",
-title: "العالمي يثير الجدل بعد أنباء انفصاله عن علا",
-description: "تفاعل واسع داخل جنبات معلا عقب تداول أنباء عن انتهاء العلاقة بين العالمي وعلا، وسط حالة من الحيرة والتعاطف، فيما أشار مقربون إلى أن العالمي يمر بفترة تروما."
-},
+const messages = [
 
-{
-category: "عاااااااااااااااااااااجل",
-title: "مفاجأة .. حمودي طلع قااااصر!",
-description: "حالة من الدهشة سادت أوساط جنبات معلا بعد الكشف عن أن حمودي القاصر، الأمر الذي فتح باب المراجعة حول طبيعة النقاشات السابقة، وأعاد التأكيد على أهمية مراعاة العمر والخصوصية والالتزام بالألفاظ وعدم الشتم."
-},
+"يا آلاء، يمكن ما بعرف أوصف كل الحاجات الجواي، لكن بعرف إنك بقيتي جزء جميل من أيامي.",
 
-{
-category: "أخبار المجتمع",
-title: "بدر التمامي يظهر في لقطة عفوية ويثير تفاعلاً واسعاً",
-description: "صورة متداولة لبدر التمامي تشعل النقاش داخل جنبات معلا، وسط تعليقات ساخرة وتفاعل لافت من المتابعين. وتبقى الصورة وحدها غير كافية لإثبات أي انتماء أو هوية."
-},
+"أوعدك أكون زول يسمعك، يفهم سكوتك قبل كلامك، وما يخليك تحسي إنك وحدك.",
 
-{
-category: "خطيييييييير",
-title: "زيكو يغتصب قاصر في العمر الثاني عشر",
-description: "وااااااااااااااااااااااي."
-},
+"عايز أشوفك مبسوطة، ناجحة، مرتاحة، وتحققي كل الأحلام البتتمنيها.",
 
-{
-category: "أخبار متداولة",
-title: "الكندي يتصدر أحاديث جنبات معلا من جديد",
-description: "عاد اسم الكندي إلى واجهة النقاشات بعد تداول أحاديث عن بحثه عن علاقات جديدة، وسط مطالبات من الاعضاء."
-},
+"حتى في الأيام البكون فيها كل شيء صعب، أتمنى أكون ليك مساحة أمان وراحة.",
 
-{
-category: "أخبار الديوان",
-title: "مارسلو يتسبب في إخلاء ديوان الرجال!",
-description: "مشهد غير معتاد في جنبات معلا، بعدما فقع مارسلو بيض اعضاء الديوان بمواقف قنيطة، لتنتهي الجلسة بمغادرة الكل."
-},
+"أوعدك ما أستهين بمشاعرك، ولا أعتبر وجودك حاجة مضمونة، لأنك غالية شديد.",
 
-{
-category: "أخبار حلوة",
-description: "مصادر جنبات معلا تشير إلى أن حمزة يستعد للقاء حبيبته يوم 15، وسط حالة من الترقب والتكهنات حول تفاصيل الموعد، مع تأكيد انه سيمارس الجنس معها."
-},
+"لو الأيام فرقتنا بالمسافات، أتمنى المحبة والاهتمام يفضلوا قريبين مننا.",
 
-{
-category: "أخبار الجامعات",
-title: "مجاهد علي.. حضور لافت في كلية الفجر",
-description: "مجاهد علي، يتصدر أحاديث الجامعة بتصريح طريف وصف فيه حالته النفسية بأنها في غاية السوء، وسط تفاعل واسع من أصدقائه وزملائه."
-}
-{
-category: "عااااااااااجلن",
-title: "حمزة يناادي لحوجه عاجلة!",
-description: "انااا هورني الاااااااااان."
-},
+"وأخيراً... شكراً لأنك آلاء، وشكراً لكل لحظة جميلة دخلتيها حياتي. بحبك يا حبيبتي. ❤️"
+
 ];
 
 let current = 0;
-let timer;
+let typingTimer;
 
-function showNews(index) {
-    current = (index + news.length) % news.length;
+function unlock() {
 
-    const content = document.getElementById("newsContent");
+  const pass = document.getElementById("password").value;
 
-    content.style.animation = "none";
-    void content.offsetWidth;
-    content.style.animation = "appear .6s ease";
+  if (pass.toLowerCase() === "love") {
 
-    document.getElementById("category").textContent =
-        news[current].category;
+    document.getElementById("login").style.display = "none";
+    document.getElementById("site").style.display = "block";
 
-    document.getElementById("headline").textContent =
-        news[current].title;
+    startFlowers();
+    showMessage();
 
-    document.getElementById("description").textContent =
-        news[current].description;
+    window.scrollTo(0,0);
 
-    document.getElementById("newsNumber").textContent =
-        "الخبر " + (current + 1);
+  }
 
-    document.getElementById("counter").textContent =
-        (current + 1) + " / " + news.length;
-
-    document.getElementById("tickerText").textContent =
-        news[current].title + "  •  " + news[current].description;
 }
 
-function nextNews() {
-    showNews(current + 1);
-    restartTimer();
+document.getElementById("password").addEventListener("keydown", function(e) {
+  if (e.key === "Enter") unlock();
+});
+
+function showMessage() {
+
+  clearInterval(typingTimer);
+
+  const target = document.getElementById("message");
+  const counter = document.getElementById("counter");
+
+  target.innerHTML = "";
+  counter.innerText = `رسالة ${current + 1} من ${messages.length}`;
+
+  let i = 0;
+
+  typingTimer = setInterval(() => {
+
+    target.textContent += messages[current].charAt(i);
+
+    i++;
+
+    if (i >= messages[current].length) {
+      clearInterval(typingTimer);
+    }
+
+  }, 55);
+
 }
 
-function previousNews() {
-    showNews(current - 1);
-    restartTimer();
+function nextMessage() {
+
+  current++;
+
+  if (current >= messages.length) {
+    current = 0;
+  }
+
+  showMessage();
+
 }
 
-function restartTimer() {
-    clearInterval(timer);
-    timer = setInterval(() => {
-        showNews(current + 1);
-    }, 6500);
+function startFlowers() {
+
+  const symbols = ["❤️","💗","🌸","🌷","🌹","💕","✨","🦋"];
+
+  setInterval(() => {
+
+    const item = document.createElement("div");
+
+    item.className = "floating";
+    item.innerText = symbols[Math.floor(Math.random()*symbols.length)];
+
+    item.style.left = Math.random()*100 + "vw";
+    item.style.fontSize = (15 + Math.random()*20) + "px";
+    item.style.animationDuration = (5 + Math.random()*6) + "s";
+
+    document.body.appendChild(item);
+
+    setTimeout(() => item.remove(),11000);
+
+  },450);
+
 }
 
-showNews(0);
-restartTimer();
 </script>
 
 </body>
