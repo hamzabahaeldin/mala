@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>معلا الإخبارية | جنبات معلا</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    background: #10151d;
+    color: white;
+    min-height: 100vh;
+}
+
+header {
+    background: #090d13;
+    border-bottom: 3px solid #d71920;
+    padding: 18px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.logo span {
+    color: #e31b23;
+}
+
+.logo small {
+    display: block;
+    color: #aaa;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+.live {
+    background: #d71920;
+    padding: 8px 15px;
+    font-size: 13px;
+    font-weight: bold;
+    border-radius: 3px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    50% { opacity: .55; }
+}
+
+nav {
+    background: #18212c;
+    padding: 13px 6%;
+    display: flex;
+    gap: 25px;
+    font-size: 14px;
+    color: #ddd;
+    border-bottom: 1px solid #303b49;
+}
+
+nav span:first-child {
+    color: #ff4248;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 1050px;
+    margin: 35px auto;
+    padding: 0 18px;
+}
+
+.section-title {
+    border-right: 4px solid #d71920;
+    padding-right: 12px;
+    margin-bottom: 20px;
+    font-size: 19px;
+}
+
+.main-news {
+    background: #1b2532;
+    border: 1px solid #344253;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 12px 35px #0005;
+}
+
+.news-top {
+    background: #d71920;
+    padding: 10px 18px;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.news-content {
+    padding: 35px 25px;
+    text-align: center;
+    animation: appear .6s ease;
+}
+
+@keyframes appear {
+    from { opacity: 0; transform: translateY(12px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.category {
+    color: #ff555b;
+    font-size: 13px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.news-content h1 {
+    font-size: clamp(23px, 4vw, 36px);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.news-content p {
+    color: #c2cad3;
+    line-height: 2;
+    font-size: 15px;
+    max-width: 750px;
+    margin: auto;
+}
+
+.news-bottom {
+    padding: 12px 18px;
+    border-top: 1px solid #344253;
+    color: #9da9b7;
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin: 18px 0 35px;
+}
+
+.controls button {
+    background: #d71920;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.controls button:hover {
+    background: #a80e15;
+}
+
+#counter {
+    color: #c5ccd5;
+    font-size: 13px;
+}
+
+.ticker {
+    display: flex;
+    align-items: stretch;
+    background: #090d13;
+    border: 1px solid #303b49;
+    overflow: hidden;
+    margin-top: 30px;
+    height: 48px;
+}
+
+.ticker-label {
+    background: #d71920;
+    padding: 14px 18px;
+    font-weight: bold;
+    white-space: nowrap;
+    font-size: 13px;
+    z-index: 1;
+}
+
+.ticker-window {
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.ticker-text {
+    white-space: nowrap;
+    padding-right: 100%;
+    animation: ticker 25s linear infinite;
+    color: #eee;
+    font-size: 13px;
+}
+
+@keyframes ticker {
+    from { transform: translateX(0); }
+    to { transform: translateX(100%); }
+}
+
+.disclaimer {
+    background: #18212c;
+    border-right: 3px solid #d71920;
+    color: #b9c3ce;
+    padding: 15px;
+    line-height: 1.9;
+    font-size: 12px;
+    margin-top: 30px;
+}
+
+footer {
+    background: #090d13;
+    text-align: center;
+    padding: 25px 10px;
+    color: #84909d;
+    font-size: 12px;
+    margin-top: 45px;
+    border-top: 1px solid #303b49;
+}
+
+footer strong {
+    color: #e31b23;
+}
+
+@media(max-width: 600px) {
+    header {
+        padding: 15px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    nav {
+        gap: 15px;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 12px 15px;
+    }
+
+    .news-content {
+        padding: 30px 17px;
+    }
+
+    .news-bottom {
+        font-size: 10px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">
+        <span>معلا</span> الإخبارية
+        <small>جنبات معلا | الخبر أولاً.. والضحكة أخيراً</small>
+    </div>
+    <div class="live">● بث تجريبي</div>
+</header>
+
+<nav>
+    <span>الرئيسية</span>
+    <span>آخر الأخبار</span>
+    <span>أخبار جنبات معلا</span>
+    <span>منوعات</span>
+</nav>
+
+<div class="container">
+
+    <h2 class="section-title">آخر المستجدات</h2>
+
+    <section class="main-news">
+
+        <div class="news-top">
+            <span>عاجل | جنبات معلا</span>
+            <span>نشرة ترفيهية</span>
+        </div>
+
+        <div class="news-content" id="newsContent">
+            <div class="category" id="category">أخبار حصرية</div>
+            <h1 id="headline">مرحباً بكم في معلا الإخبارية</h1>
+            <p id="description">
+                تابعوا آخر المستجدات والأحداث الطريفة من جنبات معلا.
+            </p>
+        </div>
+
+        <div class="news-bottom">
+            <span>معلا الإخبارية</span>
+            <span id="newsNumber">الخبر 1</span>
+        </div>
+
+    </section>
+
+    <div class="controls">
+        <button onclick="previousNews()">السابق</button>
+        <span id="counter">1 / 8</span>
+        <button onclick="nextNews()">التالي</button>
+    </div>
+
+    <h2 class="section-title">شريط الأخبار العاجلة</h2>
+
+    <div class="ticker">
+        <div class="ticker-label">عاجل</div>
+        <div class="ticker-window">
+            <div class="ticker-text" id="tickerText">
+                معلا الإخبارية ترحب بكم.. تابعوا آخر الأخبار من جنبات معلا
+            </div>
+        </div>
+    </div>
+
+    <div class="disclaimer">
+        تنويه: معلا الإخبارية منصة ساخرة وترفيهية، والأخبار المنشورة هنا
+        مكتوبة لغرض المزاح فقط، ولا تمثل وقائع مؤكدة أو اتهامات حقيقية.
+    </div>
+
+</div>
+
+<footer>
+    <strong>معلا الإخبارية</strong>
+    <p>جنبات معلا © 2026 — جميع الحقوق محفوظة</p>
+</footer>
+
+<script>
+const news = [
+
+{
+category: "أخبار اجتماعية",
+title: "العالمي يثير الجدل بعد أنباء انفصاله عن علا",
+description: "تفاعل واسع داخل جنبات معلا عقب تداول أنباء عن انتهاء العلاقة بين العالمي وعلا، وسط حالة من الحيرة والتعاطف، فيما أشار مقربون إلى أن العالمي يمر بفترة نفسية صعبة."
+},
+
+{
+category: "متابعات حصرية",
+title: "مفاجأة العمر.. حمودي يبلغ 17 عاماً!",
+description: "حالة من الدهشة سادت أوساط جنبات معلا بعد الكشف عن أن حمودي يبلغ من العمر 17 عاماً، الأمر الذي فتح باب المراجعة حول طبيعة النقاشات السابقة، وأعاد التأكيد على أهمية مراعاة العمر والخصوصية والالتزام بالألفاظ المناسبة."
+},
+
+{
+category: "أخبار المجتمع",
+title: "بدر التمامي يظهر في لقطة عفوية ويثير تفاعلاً واسعاً",
+description: "صورة متداولة لبدر التمامي تشعل النقاش داخل جنبات معلا، وسط تعليقات ساخرة وتفاعل لافت من المتابعين. وتبقى الصورة وحدها غير كافية لإثبات أي انتماء أو هوية."
+},
+
+{
+category: "تنبيه مهم",
+title: "تداول ادعاء خطير باسم زيكو دون أدلة معلنة",
+description: "تداولت مجموعات داخل جنبات معلا ادعاءً يتعلق بواقعة اعتداء، دون وجود معلومات موثوقة أو تحقق مستقل. وتؤكد المنصة أن أي اتهام من هذا النوع يحتاج إلى بلاغ رسمي وتحقيق من الجهات المختصة، ولا يجوز التعامل معه كحقيقة."
+},
+
+{
+category: "أخبار متداولة",
+title: "الكندي يتصدر أحاديث جنبات معلا من جديد",
+description: "عاد اسم الكندي إلى واجهة النقاشات بعد تداول أحاديث عن بحثه عن علاقات جديدة، وسط مطالبات من المتابعين بمراعاة الحدود القانونية والأخلاقية واحترام خصوصية الآخرين."
+},
+
+{
+category: "أخبار الديوان",
+title: "مارسلو يتسبب في إخلاء ديوان الرجال!",
+description: "مشهد غير معتاد في جنبات معلا، بعدما أشعل مارسلو أجواء الديوان بموقف مثير للجدل، لتنتهي الجلسة بمغادرة جماعية وسط ضحكات وتعليقات الحاضرين."
+},
+
+{
+category: "أخبار خاصة",
+title: "حمزة يترقب موعداً عاطفياً في الخامس عشر من الشهر",
+description: "مصادر جنبات معلا تشير إلى أن حمزة يستعد للقاء حبيبته يوم 15، وسط حالة من الترقب والتكهنات حول تفاصيل الموعد، مع تأكيد أهمية الاحترام والتراضي والخصوصية."
+},
+
+{
+category: "أخبار الجامعات",
+title: "مجاهد علي.. حضور لافت في كلية الفجر",
+description: "مجاهد علي، المعروف بلقب البرلوم، يتصدر أحاديث الجامعة بتصريح طريف وصف فيه حالته النفسية بأنها في غاية السوء، وسط تفاعل واسع من أصدقائه وزملائه."
+}
+
+];
+
+let current = 0;
+let timer;
+
+function showNews(index) {
+    current = (index + news.length) % news.length;
+
+    const content = document.getElementById("newsContent");
+
+    content.style.animation = "none";
+    void content.offsetWidth;
+    content.style.animation = "appear .6s ease";
+
+    document.getElementById("category").textContent =
+        news[current].category;
+
+    document.getElementById("headline").textContent =
+        news[current].title;
+
+    document.getElementById("description").textContent =
+        news[current].description;
+
+    document.getElementById("newsNumber").textContent =
+        "الخبر " + (current + 1);
+
+    document.getElementById("counter").textContent =
+        (current + 1) + " / " + news.length;
+
+    document.getElementById("tickerText").textContent =
+        news[current].title + "  •  " + news[current].description;
+}
+
+function nextNews() {
+    showNews(current + 1);
+    restartTimer();
+}
+
+function previousNews() {
+    showNews(current - 1);
+    restartTimer();
+}
+
+function restartTimer() {
+    clearInterval(timer);
+    timer = setInterval(() => {
+        showNews(current + 1);
+    }, 6500);
+}
+
+showNews(0);
+restartTimer();
+</script>
+
+</body>
+</html>
