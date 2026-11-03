@@ -5,432 +5,620 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>إلى حبيبتي آلاء ❤️</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
 body {
-  font-family: 'Cairo', sans-serif;
-  background: #fff0f5;
-  color: #713d53;
-  overflow-x: hidden;
-  min-height: 100vh;
+  font-family:'Cairo',sans-serif;
+  background:#fff0f4;
+  color:#75465a;
+  min-height:100vh;
+  overflow-x:hidden;
 }
 
+/* LOGIN */
+
 #login {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 25px;
-  background:
-    radial-gradient(circle at top, #ffe0eb, transparent 60%),
-    linear-gradient(135deg,#fff5f8,#fbd5e3);
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:linear-gradient(145deg,#fff0f5,#f9d6e2,#fff5f7);
 }
 
 .login-card {
-  background: rgba(255,255,255,.75);
-  backdrop-filter: blur(15px);
-  padding: 40px 25px;
-  width: 100%;
-  max-width: 390px;
-  border: 1px solid white;
-  border-radius: 28px;
-  text-align: center;
-  box-shadow: 0 15px 50px #d98da933;
+  width:100%;
+  max-width:390px;
+  padding:40px 25px;
+  text-align:center;
+  border-radius:28px;
+  background:#ffffffbd;
+  backdrop-filter:blur(18px);
+  border:1px solid white;
+  box-shadow:0 20px 60px #b85d7b25;
 }
 
-.big-heart {
-  font-size: 65px;
-  animation: heartbeat 1.5s infinite;
+.heart {
+  width:65px;
+  height:65px;
+  margin:auto;
+  background:#e77d9e;
+  transform:rotate(45deg);
+  border-radius:10px;
+  position:relative;
+  animation:pulse 1.5s infinite;
 }
 
-h1 {
-  font-size: 25px;
-  margin: 15px 0;
+.heart:before,.heart:after {
+  content:"";
+  position:absolute;
+  width:65px;
+  height:65px;
+  background:#e77d9e;
+  border-radius:50%;
+}
+
+.heart:before {top:-32px;left:0}
+.heart:after {left:-32px;top:0}
+
+@keyframes pulse {
+  50% {transform:rotate(45deg) scale(1.12)}
+}
+
+.login-card h1 {
+  font-size:23px;
+  margin:35px 0 12px;
+  color:#c85f84;
 }
 
 .login-card p {
-  color: #a8788d;
-  margin-bottom: 25px;
+  color:#a77b8e;
+  margin-bottom:25px;
 }
 
 input {
-  width: 100%;
-  border: 1px solid #f1c3d4;
-  outline: none;
-  padding: 15px;
-  border-radius: 15px;
-  text-align: center;
-  font-family: inherit;
-  font-size: 17px;
-  background: #fff8fb;
-}
-
-input:focus {
-  border-color: #e88cac;
-  box-shadow: 0 0 10px #f3c1d5;
+  width:100%;
+  padding:15px;
+  border-radius:15px;
+  border:1px solid #edbfd0;
+  background:#fff8fb;
+  font-family:inherit;
+  font-size:17px;
+  text-align:center;
+  outline:none;
 }
 
 button {
-  font-family: inherit;
-  border: none;
-  background: linear-gradient(135deg,#e985a9,#d65e8b);
-  color: white;
-  padding: 13px 30px;
-  border-radius: 30px;
-  cursor: pointer;
-  font-size: 16px;
-  margin-top: 20px;
-  box-shadow: 0 6px 18px #d65e8b44;
+  border:0;
+  padding:13px 27px;
+  border-radius:30px;
+  background:linear-gradient(135deg,#e987a8,#ce6088);
+  color:white;
+  font-family:inherit;
+  font-size:15px;
+  cursor:pointer;
+  margin-top:20px;
+  box-shadow:0 7px 20px #ce608833;
 }
 
-button:active {
-  transform: scale(.96);
-}
+/* MAIN */
 
 #site {
-  display: none;
-  min-height: 100vh;
-  text-align: center;
-  padding: 30px 18px 60px;
-  position: relative;
-  background: linear-gradient(180deg,#fff0f5,#ffe1ec,#fff6f9);
-  overflow: hidden;
+  display:none;
+  min-height:100vh;
+  padding:45px 15px 65px;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 50% 10%,#fff 0%,transparent 55%),
+    linear-gradient(180deg,#fff0f5,#ffe2eb,#fff6f8);
 }
 
-.hero {
-  max-width: 650px;
-  margin: auto;
-  position: relative;
-  z-index: 2;
+.content {
+  max-width:650px;
+  margin:auto;
+  position:relative;
+  z-index:2;
 }
 
-.tag {
-  color: #ce7196;
-  letter-spacing: 2px;
-  font-size: 13px;
-  margin-top: 20px;
+.small-title {
+  letter-spacing:3px;
+  font-size:11px;
+  color:#c47792;
 }
 
 .name {
-  font-size: clamp(42px,10vw,75px);
-  color: #cf648e;
-  font-weight: 800;
-  margin: 12px 0;
-  text-shadow: 0 5px 20px #eaaac3;
+  font-size:65px;
+  font-weight:800;
+  color:#d36d91;
+  margin:12px 0;
+  text-shadow:0 8px 25px #e5a1b9;
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #a65e7c;
+  font-size:17px;
+  color:#9d617a;
+  margin-bottom:20px;
 }
 
-.photo-frame {
-  width: 100%;
-  max-width: 370px;
-  margin: 30px auto;
-  padding: 9px;
-  border-radius: 25px;
-  background: white;
-  box-shadow: 0 10px 35px #bc6e9030;
-  transform: rotate(-1deg);
+/* REAL ROSES */
+
+.rose {
+  position:fixed;
+  width:155px;
+  height:220px;
+  object-fit:cover;
+  z-index:1;
+  opacity:.72;
+  pointer-events:none;
+  filter:drop-shadow(0 8px 12px #9c456833);
 }
 
-.photo-frame img {
-  width: 100%;
-  height: 390px;
-  object-fit: cover;
-  border-radius: 19px;
-  display: block;
+.rose.left {
+  left:-65px;
+  top:100px;
+  border-radius:90px 15px 90px 15px;
+  transform:rotate(-17deg);
 }
 
-.love-card {
-  background: rgba(255,255,255,.8);
-  backdrop-filter: blur(10px);
-  max-width: 530px;
-  min-height: 180px;
-  margin: 25px auto;
-  padding: 28px 22px;
-  border-radius: 25px;
-  border: 1px solid white;
-  box-shadow: 0 10px 35px #d18aa522;
+.rose.right {
+  right:-65px;
+  bottom:60px;
+  border-radius:15px 90px 15px 90px;
+  transform:rotate(17deg);
 }
 
-.love-card h2 {
-  color: #d66f98;
-  margin-bottom: 17px;
+.photo {
+  width:100%;
+  max-width:340px;
+  height:370px;
+  margin:20px auto 35px;
+  padding:8px;
+  background:white;
+  border-radius:22px;
+  box-shadow:0 15px 35px #b76d882c;
 }
 
-#message {
-  font-size: 17px;
-  line-height: 2.1;
-  color: #815269;
-  min-height: 85px;
+.photo img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:16px;
 }
 
-.counter {
-  color: #c97999;
-  margin-top: 15px;
-  font-size: 13px;
+/* ENVELOPE */
+
+.section-title {
+  color:#c66a8b;
+  font-size:22px;
+  margin:35px 0 10px;
+}
+
+.hint {
+  font-size:13px;
+  color:#ad8294;
+  margin-bottom:30px;
+}
+
+.envelope-area {
+  width:100%;
+  max-width:430px;
+  height:310px;
+  margin:0 auto 35px;
+  position:relative;
+  perspective:1000px;
+}
+
+.envelope {
+  position:absolute;
+  width:100%;
+  height:210px;
+  bottom:0;
+  background:#d982a0;
+  border-radius:8px;
+  box-shadow:0 15px 35px #a94e7030;
+}
+
+.envelope:before {
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(145deg,#efabc0,#d77c9d);
+  clip-path:polygon(0 0,50% 55%,100% 0);
+  z-index:4;
+}
+
+.envelope:after {
+  content:"";
+  position:absolute;
+  bottom:0;
+  width:100%;
+  height:100%;
+  background:#e99bb4;
+  clip-path:polygon(0 100%,50% 43%,100% 100%);
+  z-index:5;
+}
+
+.flap {
+  position:absolute;
+  width:100%;
+  height:110px;
+  top:0;
+  background:#eaa1b8;
+  clip-path:polygon(0 0,100% 0,50% 100%);
+  transform-origin:top;
+  transition:transform 1s ease;
+  z-index:6;
+}
+
+.seal {
+  position:absolute;
+  z-index:8;
+  left:50%;
+  top:52%;
+  transform:translate(-50%,-50%);
+  width:52px;
+  height:52px;
+  background:#bd4e76;
+  color:white;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:22px;
+  box-shadow:0 4px 12px #71304844;
+  transition:.4s;
+}
+
+.letter {
+  position:absolute;
+  width:92%;
+  left:4%;
+  bottom:20px;
+  height:190px;
+  background:#fffdfb;
+  border-radius:9px;
+  padding:20px;
+  z-index:2;
+  overflow:hidden;
+  transition:all 1s ease;
+  box-shadow:0 5px 20px #81415822;
+}
+
+.letter-content {
+  opacity:0;
+  transition:opacity .7s ease .6s;
+}
+
+.envelope.open .flap {
+  transform:rotateX(180deg);
+  z-index:1;
+}
+
+.envelope.open .seal {
+  opacity:0;
+}
+
+.envelope.open .letter {
+  height:auto;
+  min-height:430px;
+  max-height:75vh;
+  overflow-y:auto;
+  bottom:115px;
+  z-index:7;
+  padding:24px 18px;
+}
+
+.envelope.open .letter-content {
+  opacity:1;
+}
+
+.open-hint {
+  position:absolute;
+  bottom:-45px;
+  width:100%;
+  color:#c16b8c;
+  font-size:13px;
+}
+
+/* LOVE LETTER TEXT */
+
+.letter h2 {
+  color:#c65f86;
+  font-family:'Amiri',serif;
+  font-size:26px;
+  margin-bottom:18px;
+}
+
+.message {
+  font-family:'Amiri',serif;
+  font-size:18px;
+  line-height:2.1;
+  color:#795366;
+  margin-bottom:16px;
+  text-align:center;
+}
+
+.divider {
+  color:#d98ba7;
+  margin:15px;
+  letter-spacing:8px;
 }
 
 .signature {
-  font-size: 19px;
-  margin-top: 35px;
-  color: #c45e88;
+  color:#c55f85;
+  font-size:20px;
+  margin-top:20px;
 }
 
-.floating {
-  position: fixed;
-  bottom: -40px;
-  z-index: 1;
-  pointer-events: none;
-  animation: floatUp linear forwards;
+/* MOVING PETALS */
+
+.petal {
+  position:fixed;
+  top:-30px;
+  width:13px;
+  height:19px;
+  background:linear-gradient(135deg,#f5a6bd,#d95d86);
+  border-radius:100% 0 100% 0;
+  opacity:.7;
+  z-index:3;
+  pointer-events:none;
+  animation:fall linear forwards;
 }
 
-@keyframes floatUp {
+@keyframes fall {
   to {
-    transform: translateY(-115vh) rotate(360deg);
-    opacity: 0;
+    transform:translateY(110vh) rotate(650deg);
+    opacity:0;
   }
 }
 
-@keyframes heartbeat {
-  0%,100% {transform:scale(1)}
-  50% {transform:scale(1.18)}
-}
-
-@keyframes fade {
-  from {opacity:0;transform:translateY(15px)}
-  to {opacity:1;transform:translateY(0)}
-}
-
-.hidden {
-  display: none !important;
-}
-
 .footer {
-  margin-top: 35px;
-  color: #c18aa0;
-  font-size: 12px;
+  margin-top:40px;
+  color:#bf8199;
+  font-size:12px;
+  line-height:2;
 }
 
+@media(max-width:500px) {
+  .rose {
+    width:105px;
+    height:150px;
+    opacity:.48;
+  }
+
+  .name {font-size:55px}
+  .photo {height:340px}
+  .envelope-area {height:310px}
+}
 </style>
 </head>
 
 <body>
 
-<!-- شاشة كلمة المرور -->
-
 <section id="login">
   <div class="login-card">
-    <div class="big-heart">💗</div>
-
+    <div class="heart"></div>
     <h1>جاهزة يا حبيبتي آلاء؟ 😍</h1>
+    <p>في عالم صغير معمول مخصوص عشانك...</p>
 
-    <p>في حاجة صغيرة معمولة مخصوص ليكِ...</p>
-
-    <input
+    <input id="password"
       type="password"
-      id="password"
-      placeholder="اكتبي كلمة السر يا حلوة"
-      autocomplete="off"
-    >
+      placeholder="كلمة السر">
 
-    <button onclick="unlock()">افتحي مفاجأتك ❤️</button>
-
-    <div style="margin-top:20px;color:#d28ba5;font-size:12px">
-      Made with love 💌
-    </div>
+    <button onclick="unlock()">افتحي عالمك ❤️</button>
   </div>
 </section>
 
 
-<!-- الموقع الرئيسي -->
-
 <main id="site">
 
-  <div class="hero">
+  <!-- صور ورود حقيقية -->
+  <img class="rose left"
+    src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400"
+    alt="ورود حقيقية">
 
-    <div class="tag">A LITTLE WORLD MADE FOR YOU</div>
+  <img class="rose right"
+    src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400"
+    alt="زهور وردية">
 
-    <div style="font-size:35px;margin-top:20px">
-      🌷 💗 🌷
+  <div class="content">
+
+    <div class="small-title">
+      A LITTLE WORLD MADE FOR YOU
     </div>
 
     <h1 class="name">آلاء</h1>
 
     <p class="subtitle">
-      يا أجمل حكاية في أيامي ❤️
+      يا أجمل حكاية في أيامي 🤍
     </p>
 
-    <div class="photo-frame">
+    <div class="photo">
       <img
         src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900"
-        alt="لحظة حب رومانسية"
-      >
+        alt="حبيبان في لحظة رومانسية">
     </div>
 
-    <div class="love-card">
+    <h2 class="section-title">
+      رسالة من قلبي ليكِ 💌
+    </h2>
 
-      <h2>رسالة صغيرة ليكِ 💌</h2>
+    <p class="hint">
+      في ظرف صغير شايل كلام كتير...
+      اضغطي عليه عشان تفتحي رسالتك.
+    </p>
 
-      <p id="message"></p>
+    <!-- ظرف الحب -->
 
-      <div class="counter" id="counter">
-        رسالة 1 من 7
+    <div class="envelope-area">
+
+      <div class="envelope" id="envelope"
+        onclick="openLetter()">
+
+        <div class="letter">
+          <div class="letter-content">
+
+            <h2>إلى حبيبتي آلاء ❤️</h2>
+
+            <div class="divider">♡ ♡ ♡</div>
+
+            <p class="message">
+              يا آلاء، يمكن ما بعرف أوصف كل الحاجات الجواي،
+              لكن بعرف إنك بقيتي جزء جميل من أيامي،
+              ووجودك عندي عنده معنى مختلف.
+            </p>
+
+            <p class="message">
+              أوعدك أكون زول يسمعك ويفهمك،
+              ويهتم بتفاصيلك الصغيرة قبل الكبيرة،
+              وما يخليك تحسي إنك وحدك في الأيام الصعبة.
+            </p>
+
+            <p class="message">
+              أوعدك أفرح لنجاحك كأنو نجاحي،
+              وأشجعك على أحلامك،
+              وأكون من الناس البتتمنى ليك الخير دائماً.
+            </p>
+
+            <p class="message">
+              ما بوعدك إن الدنيا تكون مثالية،
+              لكن بوعدك إن وجودك عندي ما يكون حاجة عادية،
+              وإن مشاعرك تستحق الاحترام والاهتمام.
+            </p>
+
+            <p class="message">
+              عايز أشوفك مبسوطة ومرتاحة،
+              وتحققي كل الحاجات البتتمنيها،
+              وتفضلي دائماً شايفة نفسك جميلة وقوية.
+            </p>
+
+            <p class="message">
+              ولو الأيام كانت صعبة،
+              أتمنى أكون ليك مساحة أمان وراحة،
+              ومكان تقدري تكوني فيه على طبيعتك.
+            </p>
+
+            <div class="divider">♡ ♡ ♡</div>
+
+            <p class="message">
+              وأخيراً يا آلاء...
+              شكراً لأنك إنتِ،
+              وشكراً لكل لحظة جميلة دخلتيها حياتي.
+            </p>
+
+            <div class="signature">
+              بحبك يا حبيبتي ❤️
+              <br>
+              <small>من حمزة، بكل الحب.</small>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="flap"></div>
+        <div class="seal">♥</div>
+
       </div>
 
-      <button onclick="nextMessage()">
-        الرسالة التالية 🌸
-      </button>
+      <div class="open-hint" id="hint">
+        اضغطي على الظرف لفتح الرسالة
+      </div>
 
     </div>
 
-    <div class="love-card">
-      <h2>وعودي ليكِ 🤍</h2>
-
-      <p style="line-height:2.2">
-        أوعدك أحاول أكون سبب في ضحكتك،
-        وأسمعك لما تحتاجي تتكلمي،
-        وأكون جنبك في الأيام الصعبة قبل الحلوة،
-        وأفضل أختارك كل يوم بمحبة واهتمام.
-        <br>
-        ما بوعدك إن الدنيا تكون مثالية،
-        لكن بوعدك إن وجودك عندي ما يكون حاجة عادية.
-      </p>
+    <div class="photo">
+      <img
+        src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=900"
+        alt="ورود طبيعية">
     </div>
 
-    <div style="font-size:35px;margin-top:25px">
-      🌹 🦋 🌹
-    </div>
+    <h2 class="section-title">
+      أمنية صغيرة ليكِ 🌷
+    </h2>
+
+    <p class="message">
+      أتمنى أيامك تكون مليانة فرح،
+      وقلبك مطمئن،
+      وأحلامك أقرب ليكِ من أي وقت فات.
+      وتفضلي دائماً محاطة بالمحبة.
+    </p>
 
     <div class="signature">
-      بحبك يا آلاء ❤️
-      <br>
-      <small>إلى أجمل إنسانة في قلبي</small>
+      إلى آلاء... بكل الحب ❤️
     </div>
 
     <div class="footer">
       THIS LITTLE WORLD BELONGS TO YOU
       <br>
-      Made with all my love ♡
+      MADE WITH LOVE BY HAMZA
     </div>
 
   </div>
-
 </main>
 
 
 <script>
 
-const messages = [
-
-"يا آلاء، يمكن ما بعرف أوصف كل الحاجات الجواي، لكن بعرف إنك بقيتي جزء جميل من أيامي.",
-
-"أوعدك أكون زول يسمعك، يفهم سكوتك قبل كلامك، وما يخليك تحسي إنك وحدك.",
-
-"عايز أشوفك مبسوطة، ناجحة، مرتاحة، وتحققي كل الأحلام البتتمنيها.",
-
-"حتى في الأيام البكون فيها كل شيء صعب، أتمنى أكون ليك مساحة أمان وراحة.",
-
-"أوعدك ما أستهين بمشاعرك، ولا أعتبر وجودك حاجة مضمونة، لأنك غالية شديد.",
-
-"لو الأيام فرقتنا بالمسافات، أتمنى المحبة والاهتمام يفضلوا قريبين مننا.",
-
-"وأخيراً... شكراً لأنك آلاء، وشكراً لكل لحظة جميلة دخلتيها حياتي. بحبك يا حبيبتي. ❤️"
-
-];
-
-let current = 0;
-let typingTimer;
-
 function unlock() {
-
   const pass = document.getElementById("password").value;
 
-  if (pass.toLowerCase() === "love") {
-
+  if(pass.toLowerCase() === "love") {
     document.getElementById("login").style.display = "none";
     document.getElementById("site").style.display = "block";
 
-    startFlowers();
-    showMessage();
-
     window.scrollTo(0,0);
-
+    startPetals();
   }
-
 }
 
-document.getElementById("password").addEventListener("keydown", function(e) {
-  if (e.key === "Enter") unlock();
+document.getElementById("password")
+.addEventListener("keydown",function(e) {
+  if(e.key === "Enter") unlock();
 });
 
-function showMessage() {
+let opened = false;
 
-  clearInterval(typingTimer);
+function openLetter() {
+  if(opened) return;
 
-  const target = document.getElementById("message");
-  const counter = document.getElementById("counter");
+  opened = true;
 
-  target.innerHTML = "";
-  counter.innerText = `رسالة ${current + 1} من ${messages.length}`;
+  document.getElementById("envelope")
+    .classList.add("open");
 
-  let i = 0;
-
-  typingTimer = setInterval(() => {
-
-    target.textContent += messages[current].charAt(i);
-
-    i++;
-
-    if (i >= messages[current].length) {
-      clearInterval(typingTimer);
-    }
-
-  }, 55);
-
+  document.getElementById("hint")
+    .textContent = "رسالة من قلبي ليكِ، بكل الحب ❤️";
 }
 
-function nextMessage() {
-
-  current++;
-
-  if (current >= messages.length) {
-    current = 0;
-  }
-
-  showMessage();
-
-}
-
-function startFlowers() {
-
-  const symbols = ["❤️","💗","🌸","🌷","🌹","💕","✨","🦋"];
+function startPetals() {
 
   setInterval(() => {
 
-    const item = document.createElement("div");
+    const petal = document.createElement("div");
 
-    item.className = "floating";
-    item.innerText = symbols[Math.floor(Math.random()*symbols.length)];
+    petal.className = "petal";
 
-    item.style.left = Math.random()*100 + "vw";
-    item.style.fontSize = (15 + Math.random()*20) + "px";
-    item.style.animationDuration = (5 + Math.random()*6) + "s";
+    petal.style.left = Math.random()*100 + "vw";
+    petal.style.animationDuration =
+      (6 + Math.random()*6) + "s";
 
-    document.body.appendChild(item);
+    petal.style.width =
+      (8 + Math.random()*10) + "px";
 
-    setTimeout(() => item.remove(),11000);
+    document.body.appendChild(petal);
 
-  },450);
+    setTimeout(() => petal.remove(),12000);
+
+  },500);
 
 }
 
