@@ -3,625 +3,453 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>إلى حبيبتي آلاء ❤️</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+<title>العربية | جنبات معلا</title>
 
 <style>
 * {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family:'Cairo',sans-serif;
-  background:#fff0f4;
-  color:#75465a;
-  min-height:100vh;
-  overflow-x:hidden;
+    font-family: Tahoma, Arial, sans-serif;
+    background: #f3f3f3;
+    color: #222;
 }
 
-/* LOGIN */
-
-#login {
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:20px;
-  background:linear-gradient(145deg,#fff0f5,#f9d6e2,#fff5f7);
+.topbar {
+    background: #171717;
+    color: white;
+    padding: 10px 6%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
 }
 
-.login-card {
-  width:100%;
-  max-width:390px;
-  padding:40px 25px;
-  text-align:center;
-  border-radius:28px;
-  background:#ffffffbd;
-  backdrop-filter:blur(18px);
-  border:1px solid white;
-  box-shadow:0 20px 60px #b85d7b25;
+.header {
+    background: white;
+    padding: 22px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
 }
 
-.heart {
-  width:65px;
-  height:65px;
-  margin:auto;
-  background:#e77d9e;
-  transform:rotate(45deg);
-  border-radius:10px;
-  position:relative;
-  animation:pulse 1.5s infinite;
+.logo {
+    font-size: 38px;
+    font-weight: bold;
+    color: #b90019;
+    letter-spacing: -2px;
 }
 
-.heart:before,.heart:after {
-  content:"";
-  position:absolute;
-  width:65px;
-  height:65px;
-  background:#e77d9e;
-  border-radius:50%;
+.logo span {
+    display: block;
+    font-size: 13px;
+    color: #555;
+    letter-spacing: 0;
+    margin-top: 3px;
 }
 
-.heart:before {top:-32px;left:0}
-.heart:after {left:-32px;top:0}
-
-@keyframes pulse {
-  50% {transform:rotate(45deg) scale(1.12)}
+.header-date {
+    color: #777;
+    font-size: 13px;
 }
 
-.login-card h1 {
-  font-size:23px;
-  margin:35px 0 12px;
-  color:#c85f84;
+nav {
+    background: #b90019;
+    color: white;
+    padding: 15px 6%;
+    display: flex;
+    gap: 28px;
+    overflow-x: auto;
+    white-space: nowrap;
 }
 
-.login-card p {
-  color:#a77b8e;
-  margin-bottom:25px;
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
 }
 
-input {
-  width:100%;
-  padding:15px;
-  border-radius:15px;
-  border:1px solid #edbfd0;
-  background:#fff8fb;
-  font-family:inherit;
-  font-size:17px;
-  text-align:center;
-  outline:none;
+.breaking {
+    background: white;
+    padding: 14px 6%;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #ddd;
 }
 
-button {
-  border:0;
-  padding:13px 27px;
-  border-radius:30px;
-  background:linear-gradient(135deg,#e987a8,#ce6088);
-  color:white;
-  font-family:inherit;
-  font-size:15px;
-  cursor:pointer;
-  margin-top:20px;
-  box-shadow:0 7px 20px #ce608833;
+.breaking strong {
+    background: #b90019;
+    color: white;
+    padding: 7px 13px;
+    font-size: 13px;
 }
 
-/* MAIN */
-
-#site {
-  display:none;
-  min-height:100vh;
-  padding:45px 15px 65px;
-  text-align:center;
-  position:relative;
-  overflow:hidden;
-  background:
-    radial-gradient(ellipse at 50% 10%,#fff 0%,transparent 55%),
-    linear-gradient(180deg,#fff0f5,#ffe2eb,#fff6f8);
+.breaking span {
+    font-size: 14px;
 }
 
-.content {
-  max-width:650px;
-  margin:auto;
-  position:relative;
-  z-index:2;
+.container {
+    max-width: 1150px;
+    margin: 35px auto;
+    padding: 0 18px;
 }
-
-.small-title {
-  letter-spacing:3px;
-  font-size:11px;
-  color:#c47792;
-}
-
-.name {
-  font-size:65px;
-  font-weight:800;
-  color:#d36d91;
-  margin:12px 0;
-  text-shadow:0 8px 25px #e5a1b9;
-}
-
-.subtitle {
-  font-size:17px;
-  color:#9d617a;
-  margin-bottom:20px;
-}
-
-/* REAL ROSES */
-
-.rose {
-  position:fixed;
-  width:155px;
-  height:220px;
-  object-fit:cover;
-  z-index:1;
-  opacity:.72;
-  pointer-events:none;
-  filter:drop-shadow(0 8px 12px #9c456833);
-}
-
-.rose.left {
-  left:-65px;
-  top:100px;
-  border-radius:90px 15px 90px 15px;
-  transform:rotate(-17deg);
-}
-
-.rose.right {
-  right:-65px;
-  bottom:60px;
-  border-radius:15px 90px 15px 90px;
-  transform:rotate(17deg);
-}
-
-.photo {
-  width:100%;
-  max-width:340px;
-  height:370px;
-  margin:20px auto 35px;
-  padding:8px;
-  background:white;
-  border-radius:22px;
-  box-shadow:0 15px 35px #b76d882c;
-}
-
-.photo img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  border-radius:16px;
-}
-
-/* ENVELOPE */
 
 .section-title {
-  color:#c66a8b;
-  font-size:22px;
-  margin:35px 0 10px;
+    border-right: 5px solid #b90019;
+    padding-right: 12px;
+    margin-bottom: 22px;
+    font-size: 21px;
+    font-weight: bold;
 }
 
-.hint {
-  font-size:13px;
-  color:#ad8294;
-  margin-bottom:30px;
+.main-news {
+    background: white;
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    box-shadow: 0 3px 15px rgba(0,0,0,.06);
+    overflow: hidden;
 }
 
-.envelope-area {
-  width:100%;
-  max-width:430px;
-  height:310px;
-  margin:0 auto 35px;
-  position:relative;
-  perspective:1000px;
+.news-image {
+    min-height: 360px;
+    background:
+    linear-gradient(135deg,#202020,#555);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    position: relative;
 }
 
-.envelope {
-  position:absolute;
-  width:100%;
-  height:210px;
-  bottom:0;
-  background:#d982a0;
-  border-radius:8px;
-  box-shadow:0 15px 35px #a94e7030;
+.news-image .image-text {
+    text-align: center;
+    padding: 30px;
 }
 
-.envelope:before {
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(145deg,#efabc0,#d77c9d);
-  clip-path:polygon(0 0,50% 55%,100% 0);
-  z-index:4;
+.image-text .big {
+    font-size: 85px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.envelope:after {
-  content:"";
-  position:absolute;
-  bottom:0;
-  width:100%;
-  height:100%;
-  background:#e99bb4;
-  clip-path:polygon(0 100%,50% 43%,100% 100%);
-  z-index:5;
+.image-text p {
+    font-size: 17px;
+    margin-top: 10px;
 }
 
-.flap {
-  position:absolute;
-  width:100%;
-  height:110px;
-  top:0;
-  background:#eaa1b8;
-  clip-path:polygon(0 0,100% 0,50% 100%);
-  transform-origin:top;
-  transition:transform 1s ease;
-  z-index:6;
+.news-content {
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.seal {
-  position:absolute;
-  z-index:8;
-  left:50%;
-  top:52%;
-  transform:translate(-50%,-50%);
-  width:52px;
-  height:52px;
-  background:#bd4e76;
-  color:white;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:22px;
-  box-shadow:0 4px 12px #71304844;
-  transition:.4s;
+.category {
+    color: #b90019;
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 17px;
 }
 
-.letter {
-  position:absolute;
-  width:92%;
-  left:4%;
-  bottom:20px;
-  height:190px;
-  background:#fffdfb;
-  border-radius:9px;
-  padding:20px;
-  z-index:2;
-  overflow:hidden;
-  transition:all 1s ease;
-  box-shadow:0 5px 20px #81415822;
+.news-content h1 {
+    font-size: 32px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+    color: #171717;
 }
 
-.letter-content {
-  opacity:0;
-  transition:opacity .7s ease .6s;
+.description {
+    color: #666;
+    line-height: 2;
+    font-size: 16px;
 }
 
-.envelope.open .flap {
-  transform:rotateX(180deg);
-  z-index:1;
+.meta {
+    color: #999;
+    font-size: 12px;
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 17px;
 }
 
-.envelope.open .seal {
-  opacity:0;
+.article {
+    background: white;
+    margin-top: 25px;
+    padding: 35px;
+    line-height: 2.2;
+    font-size: 17px;
+    color: #333;
 }
 
-.envelope.open .letter {
-  height:auto;
-  min-height:430px;
-  max-height:75vh;
-  overflow-y:auto;
-  bottom:115px;
-  z-index:7;
-  padding:24px 18px;
+.article h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #222;
 }
 
-.envelope.open .letter-content {
-  opacity:1;
+.article p {
+    margin-bottom: 17px;
 }
 
-.open-hint {
-  position:absolute;
-  bottom:-45px;
-  width:100%;
-  color:#c16b8c;
-  font-size:13px;
+.quote {
+    border-right: 4px solid #b90019;
+    background: #f8f8f8;
+    padding: 20px;
+    margin: 22px 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-/* LOVE LETTER TEXT */
-
-.letter h2 {
-  color:#c65f86;
-  font-family:'Amiri',serif;
-  font-size:26px;
-  margin-bottom:18px;
+.other-news {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+    margin-top: 30px;
 }
 
-.message {
-  font-family:'Amiri',serif;
-  font-size:18px;
-  line-height:2.1;
-  color:#795366;
-  margin-bottom:16px;
-  text-align:center;
+.small-card {
+    background: white;
+    padding: 22px;
+    border-top: 3px solid #b90019;
 }
 
-.divider {
-  color:#d98ba7;
-  margin:15px;
-  letter-spacing:8px;
+.small-card h3 {
+    font-size: 17px;
+    margin-bottom: 10px;
 }
 
-.signature {
-  color:#c55f85;
-  font-size:20px;
-  margin-top:20px;
+.small-card p {
+    color: #777;
+    font-size: 13px;
+    line-height: 1.8;
 }
 
-/* MOVING PETALS */
-
-.petal {
-  position:fixed;
-  top:-30px;
-  width:13px;
-  height:19px;
-  background:linear-gradient(135deg,#f5a6bd,#d95d86);
-  border-radius:100% 0 100% 0;
-  opacity:.7;
-  z-index:3;
-  pointer-events:none;
-  animation:fall linear forwards;
+footer {
+    background: #171717;
+    color: white;
+    padding: 35px 6%;
+    text-align: center;
+    margin-top: 55px;
 }
 
-@keyframes fall {
-  to {
-    transform:translateY(110vh) rotate(650deg);
-    opacity:0;
-  }
+footer h2 {
+    color: #e21b35;
+    margin-bottom: 10px;
 }
 
-.footer {
-  margin-top:40px;
-  color:#bf8199;
-  font-size:12px;
-  line-height:2;
+footer p {
+    color: #aaa;
+    font-size: 13px;
+    line-height: 2;
 }
 
-@media(max-width:500px) {
-  .rose {
-    width:105px;
-    height:150px;
-    opacity:.48;
-  }
+.disclaimer {
+    margin-top: 22px;
+    color: #888;
+    font-size: 11px;
+}
 
-  .name {font-size:55px}
-  .photo {height:340px}
-  .envelope-area {height:310px}
+@media(max-width:750px) {
+    .header {
+        padding: 18px;
+    }
+
+    .logo {
+        font-size: 30px;
+    }
+
+    .main-news {
+        grid-template-columns: 1fr;
+    }
+
+    .news-image {
+        min-height: 230px;
+    }
+
+    .news-content {
+        padding: 23px;
+    }
+
+    .news-content h1 {
+        font-size: 25px;
+    }
+
+    .article {
+        padding: 23px;
+    }
+
+    .other-news {
+        grid-template-columns: 1fr;
+    }
+
+    .header-date {
+        font-size: 10px;
+    }
 }
 </style>
 </head>
 
 <body>
 
-<section id="login">
-  <div class="login-card">
-    <div class="heart"></div>
-    <h1>جاهزة يا حبيبتي آلاء؟ 😍</h1>
-    <p>في عالم صغير معمول مخصوص عشانك...</p>
+<div class="topbar">
+    <span>آخر الأخبار | جنبات معلا</span>
+    <span id="clock"></span>
+</div>
 
-    <input id="password"
-      type="password"
-      placeholder="كلمة السر">
+<header class="header">
+    <div class="logo">
+        العربية
+        <span>جنبات معلا الإخبارية</span>
+    </div>
+    <div class="header-date">
+        الأربعاء | 4 نوفمبر 2026
+    </div>
+</header>
 
-    <button onclick="unlock()">افتحي عالمك ❤️</button>
-  </div>
-</section>
+<nav>
+    <a href="#">الرئيسية</a>
+    <a href="#">السودان</a>
+    <a href="#">أخبار محلية</a>
+    <a href="#">منوعات</a>
+    <a href="#">اقتصاد</a>
+    <a href="#">رياضة</a>
+    <a href="#">تقنية</a>
+    <a href="#">الأخبار العاجلة</a>
+</nav>
 
+<div class="breaking">
+    <strong>خبر متداول</strong>
+    <span>
+        حمودي يثير جدلاً واسعاً بعد تصريح مفاجئ داخل قروب جنبات معلا
+    </span>
+</div>
 
-<main id="site">
+<main class="container">
 
-  <!-- صور ورود حقيقية -->
-  <img class="rose left"
-    src="https://images.unsplash.com/photo-1490750967868-88aa4486c946?w=400"
-    alt="ورود حقيقية">
-
-  <img class="rose right"
-    src="https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400"
-    alt="زهور وردية">
-
-  <div class="content">
-
-    <div class="small-title">
-      A LITTLE WORLD MADE FOR YOU
+    <div class="section-title">
+        أبرز الأخبار
     </div>
 
-    <h1 class="name">آلاء</h1>
+    <section class="main-news">
 
-    <p class="subtitle">
-      يا أجمل حكاية في أيامي 🤍
-    </p>
-
-    <div class="photo">
-      <img
-        src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=900"
-        alt="حبيبان في لحظة رومانسية">
-    </div>
-
-    <h2 class="section-title">
-      رسالة من قلبي ليكِ 💌
-    </h2>
-
-    <p class="hint">
-      في ظرف صغير شايل كلام كتير...
-      اضغطي عليه عشان تفتحي رسالتك.
-    </p>
-
-    <!-- ظرف الحب -->
-
-    <div class="envelope-area">
-
-      <div class="envelope" id="envelope"
-        onclick="openLetter()">
-
-        <div class="letter">
-          <div class="letter-content">
-
-            <h2>إلى حبيبتي آلاء ❤️</h2>
-
-            <div class="divider">♡ ♡ ♡</div>
-
-            <p class="message">
-              يا آلاء، يمكن ما بعرف أوصف كل الحاجات الجواي،
-              لكن بعرف إنك بقيتي جزء جميل من أيامي،
-              ووجودك عندي عنده معنى مختلف.
-            </p>
-
-            <p class="message">
-              أوعدك أكون زول يسمعك ويفهمك،
-              ويهتم بتفاصيلك الصغيرة قبل الكبيرة،
-              وما يخليك تحسي إنك وحدك في الأيام الصعبة.
-            </p>
-
-            <p class="message">
-              أوعدك أفرح لنجاحك كأنو نجاحي،
-              وأشجعك على أحلامك،
-              وأكون من الناس البتتمنى ليك الخير دائماً.
-            </p>
-
-            <p class="message">
-              ما بوعدك إن الدنيا تكون مثالية،
-              لكن بوعدك إن وجودك عندي ما يكون حاجة عادية،
-              وإن مشاعرك تستحق الاحترام والاهتمام.
-            </p>
-
-            <p class="message">
-              عايز أشوفك مبسوطة ومرتاحة،
-              وتحققي كل الحاجات البتتمنيها،
-              وتفضلي دائماً شايفة نفسك جميلة وقوية.
-            </p>
-
-            <p class="message">
-              ولو الأيام كانت صعبة،
-              أتمنى أكون ليك مساحة أمان وراحة،
-              ومكان تقدري تكوني فيه على طبيعتك.
-            </p>
-
-            <div class="divider">♡ ♡ ♡</div>
-
-            <p class="message">
-              وأخيراً يا آلاء...
-              شكراً لأنك إنتِ،
-              وشكراً لكل لحظة جميلة دخلتيها حياتي.
-            </p>
-
-            <div class="signature">
-              بحبك يا حبيبتي ❤️
-              <br>
-              <small>من حمزة، بكل الحب.</small>
+        <div class="news-image">
+            <div class="image-text">
+                <div class="big">!</div>
+                <p>جدل واسع داخل قروب جنبات معلا</p>
             </div>
-
-          </div>
         </div>
 
-        <div class="flap"></div>
-        <div class="seal">♥</div>
+        <div class="news-content">
 
-      </div>
+            <div class="category">
+                منوعات | أخبار متداولة
+            </div>
 
-      <div class="open-hint" id="hint">
-        اضغطي على الظرف لفتح الرسالة
-      </div>
+            <h1>
+                حمودي يقول أنا عربي ويثير جدلاً واسعاً في قروب جنبات معلا
+            </h1>
 
+            <p class="description">
+                في واقعة أثارت تفاعلاً واسعاً بين أعضاء قروب جنبات معلا،
+                جاء تصريح حمودي بأنه عربي ليفتح باب النقاش والتعليقات
+                وسط أجواء من الدهشة والاستغراب.
+            </p>
+
+            <div class="meta">
+                الأربعاء 4 نوفمبر 2026 | جنبات معلا الإخبارية
+            </div>
+
+        </div>
+    </section>
+
+    <section class="article">
+
+        <h2>تفاصيل الخبر</h2>
+
+        <p>
+            شهد قروب «جنبات معلا» تفاعلاً لافتاً عقب تداول تصريح منسوب
+            إلى حمودي، أعلن فيه بكل وضوح أنه عربي، وهو ما أثار موجة
+            من النقاشات بين أعضاء المجموعة.
+        </p>
+
+        <div class="quote">
+            «أنا عربي»
+        </div>
+
+        <p>
+            التصريح فتح المجال أمام عدد من التعليقات وردود الأفعال،
+            حيث تباينت آراء الأعضاء بين المستغرب والمعلّق بطريقة
+            ساخرة، بينما تحولت الواقعة إلى موضوع النقاش الأبرز
+            داخل القروب.
+        </p>
+
+        <p>
+            وحتى الآن، لا تتوفر تفاصيل إضافية موثقة حول خلفية
+            التصريح أو الظروف التي قيل فيها، فيما يستمر تداول
+            الموضوع بين أعضاء المجموعة.
+        </p>
+
+        <p>
+            وتبقى الواقعة واحدة من أبرز النقاشات المتداولة
+            داخل مجتمع جنبات معلا خلال الساعات الأخيرة.
+        </p>
+
+        <div class="meta">
+            المصدر: منشور تجريبي ساخر مستوحى من سيناريو داخل قروب جنبات معلا.
+        </div>
+
+    </section>
+
+    <div class="section-title" style="margin-top:40px">
+        أخبار أخرى
     </div>
 
-    <div class="photo">
-      <img
-        src="https://images.unsplash.com/photo-1494972308805-463bc619d34e?w=900"
-        alt="ورود طبيعية">
-    </div>
+    <section class="other-news">
 
-    <h2 class="section-title">
-      أمنية صغيرة ليكِ 🌷
-    </h2>
+        <div class="small-card">
+            <h3>تفاعل واسع بين أعضاء جنبات معلا</h3>
+            <p>
+                نقاشات وتعليقات متواصلة عقب التصريح المتداول
+                داخل المجموعة.
+            </p>
+        </div>
 
-    <p class="message">
-      أتمنى أيامك تكون مليانة فرح،
-      وقلبك مطمئن،
-      وأحلامك أقرب ليكِ من أي وقت فات.
-      وتفضلي دائماً محاطة بالمحبة.
-    </p>
+        <div class="small-card">
+            <h3>منوعات جنبات معلا</h3>
+            <p>
+                أبرز المواقف والموضوعات التي تشغل أعضاء
+                المجتمع خلال الفترة الحالية.
+            </p>
+        </div>
 
-    <div class="signature">
-      إلى آلاء... بكل الحب ❤️
-    </div>
+    </section>
 
-    <div class="footer">
-      THIS LITTLE WORLD BELONGS TO YOU
-      <br>
-      MADE WITH LOVE BY HAMZA
-    </div>
-
-  </div>
 </main>
 
+<footer>
+    <h2>العربية</h2>
+    <p>جنبات معلا الإخبارية</p>
+    <p>
+        نتابع الحدث وننقل التفاصيل
+    </p>
+    <div class="disclaimer">
+        واجهة تجريبية مستقلة وليست الموقع الرسمي لقناة العربية.
+        المحتوى المعروض نموذج ساخر وليس خبراً موثقاً.
+    </div>
+</footer>
 
 <script>
-
-function unlock() {
-  const pass = document.getElementById("password").value;
-
-  if(pass.toLowerCase() === "love") {
-    document.getElementById("login").style.display = "none";
-    document.getElementById("site").style.display = "block";
-
-    window.scrollTo(0,0);
-    startPetals();
-  }
+function updateClock() {
+    const now = new Date();
+    document.getElementById("clock").textContent =
+        now.toLocaleTimeString("ar-SD");
 }
-
-document.getElementById("password")
-.addEventListener("keydown",function(e) {
-  if(e.key === "Enter") unlock();
-});
-
-let opened = false;
-
-function openLetter() {
-  if(opened) return;
-
-  opened = true;
-
-  document.getElementById("envelope")
-    .classList.add("open");
-
-  document.getElementById("hint")
-    .textContent = "رسالة من قلبي ليكِ، بكل الحب ❤️";
-}
-
-function startPetals() {
-
-  setInterval(() => {
-
-    const petal = document.createElement("div");
-
-    petal.className = "petal";
-
-    petal.style.left = Math.random()*100 + "vw";
-    petal.style.animationDuration =
-      (6 + Math.random()*6) + "s";
-
-    petal.style.width =
-      (8 + Math.random()*10) + "px";
-
-    document.body.appendChild(petal);
-
-    setTimeout(() => petal.remove(),12000);
-
-  },500);
-
-}
-
+updateClock();
+setInterval(updateClock, 1000);
 </script>
 
 </body>
